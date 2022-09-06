@@ -1,14 +1,15 @@
 <?
+declare(strict_types=1);
 
 include 'functions.php';
 
 class ShopProduct
 {
     public function __construct(
-        public $title,
-        public $producerFirstName = "",
-        public $producerMainName = "",
-        public $price = 0
+        public string $title,
+        public string $producerFirstName = "",
+        public string $producerMainName = "",
+        public float $price = 0
     ){ }
 
 
@@ -21,21 +22,22 @@ class ShopProduct
 
 class ShopProductWriter
 {
-    public function write(ShopProduct $shopProduct)
+    public function write(ShopProduct $shopProduct): void
     {
         $str  = $shopProduct->title . ": "
             . $shopProduct->getProducer()
             . " (" . $shopProduct->price . ")\n";
-print $str; }
+        print $str; 
+    }
 }
 
-$product1 = new ShopProduct("My Antonia", "Willa", "Cather", 5.99);
+$product1 = new ShopProduct("My Antonia", "Willa", "Cather", 5.00);
 $writer = new ShopProductWriter();
 $writer->write($product1);
-$writer->write(new Wrong());
+// $writer->write(new Wrong());
 
-class Wrong
-{
-}
+// class Wrong
+// {
+// }
 
 // page 62 
