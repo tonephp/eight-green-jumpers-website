@@ -1,3 +1,10 @@
+<?php
+  require '../vendor/autoload.php';
+
+  new \core\App;
+
+  //debug(app()->getProperties());
+?>
 
 <!doctype html>
 <html lang="en" class="h-100">

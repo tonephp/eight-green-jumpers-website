@@ -1,0 +1,60 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e2306dd2c3efe316a277a21a9b16e4ee",
+    "packages": [
+        {
+            "name": "tonephp/eight-green-jumpers",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tonephp/eight-green-jumpers.git",
+                "reference": "7da16ecf9d492057e259a2bd074737efd6a1ee37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tonephp/eight-green-jumpers/zipball/7da16ecf9d492057e259a2bd074737efd6a1ee37",
+                "reference": "7da16ecf9d492057e259a2bd074737efd6a1ee37",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "app\\": "../../../app",
+                    "core\\": "core"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Pereverziev",
+                    "email": "pereverziev.andrii@gmail.com",
+                    "homepage": "https://eight-green-jumpers.tonephp.com/"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/tonephp/eight-green-jumpers/issues",
+                "source": "https://github.com/tonephp/eight-green-jumpers/tree/0.0.1"
+            },
+            "time": "2022-09-06T20:07:49+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}

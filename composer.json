@@ -1,0 +1,17 @@
+{
+    "name": "andriipereverziev/eight-green-jumpers-website",
+    "autoload": {
+        "psr-4": {
+            "Andriipereverziev\\EightGreenJumpersWebsite\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Andrii Pereverziev",
+            "email": "a.pereverziev@enamine.net"
+        }
+    ],
+    "require": {
+        "tonephp/eight-green-jumpers": "^0.0.1"
+    }
+}
