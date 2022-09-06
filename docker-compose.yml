@@ -4,7 +4,7 @@ services:
     # PHP service
     app:
         build: .
-        container_name: php-app
+        container_name: eight-green-jumpers-php-app
         working_dir: /var/www/
         volumes:
             - ./:/var/www
@@ -14,9 +14,9 @@ services:
     # MySQL database service
     db:
         image: mysql:5.7
-        container_name: mysql-db
+        container_name: eight-green-jumpers-mysql-db
         ports:
-            - "3306:3306"
+            - "4306:3306"
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
             MYSQL_DATABASE: ${DB_DATABASE}
@@ -30,9 +30,9 @@ services:
     # Nginx service
     nginx:
         image: nginx:alpine
-        container_name: php-nginx
+        container_name: eight-green-jumpers-php-nginx
         ports:
-            - 8000:80
+            - 7000:80
         volumes:
             - ./:/var/www
             - ./nginx/conf.d/:/etc/nginx/conf.d/
