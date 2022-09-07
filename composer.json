@@ -1,10 +1,5 @@
 {
     "name": "andriipereverziev/eight-green-jumpers-website",
-    "autoload": {
-        "psr-4": {
-            "Andriipereverziev\\EightGreenJumpersWebsite\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Andrii Pereverziev",
@@ -12,6 +7,6 @@
         }
     ],
     "require": {
-        "tonephp/eight-green-jumpers": "^0.0.2"
+        "tonephp/eight-green-jumpers": "^0.0.7"
     }
 }

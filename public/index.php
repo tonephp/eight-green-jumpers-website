@@ -1,9 +1,7 @@
 <?php
   require '../vendor/autoload.php';
-
+  define("DEBUG", 1);
   new \core\App;
-
-  //debug(app()->getProperties());
 ?>
 
 <!doctype html>
@@ -15,63 +13,7 @@
     <meta name="author" content="Andrii Pereverziev">
     <meta name="generator" content="Hugo 0.101.0">
     <title>Eight Green Jumpers Framework</title>
-
-<link href="./bootstrap.min.css" rel="stylesheet">
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-    </style>
-
+    <link href="./bootstrap.min.css" rel="stylesheet">
     
     <!-- Custom styles for this template -->
     <link href="./cover.css" rel="stylesheet">
@@ -89,10 +31,6 @@
   </header>
 
   <main class="px-3">
-    <p class="lead">
-      This site build using this repo for docker environment
-      <a href="https://github.com/dyarleniber/docker-php">https://github.com/dyarleniber/docker-php</a>
-    </p>
 
     <h2>Installation</h2>
     <table class="table table-dark table-striped">
@@ -103,6 +41,94 @@
             </td>
         </tr>
     </table>
+
+<article class="doc-article">
+    <h2>Run with Apache</h2>
+    <p>1. Create folder "public" in project folder</p>
+    <p>2. Create file "index.php" in public folder</p>
+
+<pre>
+&lt;?php
+  require '../vendor/autoload.php';
+  define("DEBUG", 1);
+  new \core\App;
+?&gt;
+</pre>
+
+    <p>3. Create file .htaccess in project folder</p>
+<pre>
+RewriteEngine On
+RewriteRule ^(.*)$ /public/$1
+</pre>
+
+<p>4. Create file .htaccess in public folder</p>
+<pre>
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule (.*)  index.php?$1 [L,QSA]
+</pre>
+
+<p>5. Run command in console in root folder.</p>
+<pre>
+composer require tonephp/eight-green-jumpers
+</pre>
+
+    </article>
+
+    <h2>Framework functions</h2>
+    <table class="table table-dark table-striped">
+        <tr>
+            <td>siteUrl()</td>
+            <td>
+              Return site url with protocol and '/' at the end. For example:
+              'http://localhost:7000/' or 'https://eight-green-jumpers.tonephp.com/'
+            </td>
+        </tr>
+        <tr>
+            <td>debug($value)</td>
+            <td>
+              Example:
+<pre>
+debug(siteUrl());
+</pre>
+            </td>
+        </tr>
+        <tr>
+            <td>app()</td>
+            <td>
+              Return property with instance of the App class - \core\App::$app <br>
+              You can use this methods: <br>
+              <table class="table table-dark table-striped">
+                <tr>
+                    <td>setProperty($name, $value)</td>
+                    <td>
+                        app()->setProperty('color', 'green');
+                    </td>
+                </tr>
+                <tr>
+                    <td>getProperty($name)</td>
+                    <td>
+                        app()->getProperty('color');
+                    </td>
+                </tr>
+                <tr>
+                    <td>getProperties()</td>
+                    <td>
+                        app()->getProperties();
+                    </td>
+                </tr>
+              </table>
+            </td>
+        </tr>
+    </table>
+
+    <p class="lead pt-5">
+      This site build using this repo for docker environment
+      <a href="https://github.com/dyarleniber/docker-php">https://github.com/dyarleniber/docker-php</a>
+    </p>
+
+    
 
     <h2>Interesting books</h2>
     <table class="table table-dark table-striped">
