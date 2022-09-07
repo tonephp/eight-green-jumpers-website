@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e2306dd2c3efe316a277a21a9b16e4ee",
+    "content-hash": "b771576d6a647df3151f46d8cbef5349",
     "packages": [
         {
             "name": "tonephp/eight-green-jumpers",
-            "version": "0.0.1",
+            "version": "0.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tonephp/eight-green-jumpers.git",
-                "reference": "7da16ecf9d492057e259a2bd074737efd6a1ee37"
+                "reference": "c74199fbb155e49f282e7e1e6acca2b345e9996f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tonephp/eight-green-jumpers/zipball/7da16ecf9d492057e259a2bd074737efd6a1ee37",
-                "reference": "7da16ecf9d492057e259a2bd074737efd6a1ee37",
+                "url": "https://api.github.com/repos/tonephp/eight-green-jumpers/zipball/c74199fbb155e49f282e7e1e6acca2b345e9996f",
+                "reference": "c74199fbb155e49f282e7e1e6acca2b345e9996f",
                 "shasum": ""
             },
             "require": {
@@ -41,11 +41,12 @@
                     "homepage": "https://eight-green-jumpers.tonephp.com/"
                 }
             ],
+            "description": "PHP Microframework",
             "support": {
                 "issues": "https://github.com/tonephp/eight-green-jumpers/issues",
-                "source": "https://github.com/tonephp/eight-green-jumpers/tree/0.0.1"
+                "source": "https://github.com/tonephp/eight-green-jumpers/tree/0.0.2"
             },
-            "time": "2022-09-06T20:07:49+00:00"
+            "time": "2022-09-06T21:23:18+00:00"
         }
     ],
     "packages-dev": [],

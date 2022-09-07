@@ -94,6 +94,16 @@
       <a href="https://github.com/dyarleniber/docker-php">https://github.com/dyarleniber/docker-php</a>
     </p>
 
+    <h2>Installation</h2>
+    <table class="table table-dark table-striped">
+        <tr>
+            <td>Install with composer</td>
+            <td>
+              composer require tonephp/eight-green-jumpers
+            </td>
+        </tr>
+    </table>
+
     <h2>Interesting books</h2>
     <table class="table table-dark table-striped">
         <tr>
