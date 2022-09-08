@@ -1,6 +1,6 @@
 <?php
   require '../vendor/autoload.php';
-  define("DEBUG", 1);
+  define("DEBUG", true);
   new \core\App;
 ?>
 
@@ -149,6 +149,46 @@ return [
 <?php debug(app()->getProperties()); ?>
     </article>
 
+    <h2>Errors</h2>
+
+    <article class="doc-article">
+
+    <p>
+      1. If you have <i>define("DEBUG", true);</i> in your public/index.php file and <br>
+      produce some error, like this <i>echo $myvar;</i>, you will see this error:
+    </p>
+    <img alt="" src="/images/error-development.png" style="max-width: 400px;">
+    <p>You can use your own error page:<br>
+     - Create folder <i>errors</i> in public folder.<br>
+     - Create file <i>development.php</i> in errors folder.<br>
+      You can use this variables in file development.php:<br>
+      - $errno<br>
+      - $errstr<br>
+      - $errfile<br>
+      - $errline
+    </p>
+
+    <p>
+      2. If you have <i>define("DEBUG", false);</i> in your public/index.php file and <br>
+      produce error with 404 code, you will see this error:
+    </p>
+    <img alt="" src="/images/error-not-found.png" style="max-width: 400px;">
+    <p>You can use your own error page:<br>
+     - Create folder <i>errors</i> in public folder.<br>
+     - Create file <i>404.php</i> in errors folder.<br>
+    </p>
+
+    <p>
+      2. If you have <i>define("DEBUG", false);</i> in your public/index.php file and <br>
+      produce error with some code that is not equal to 404, you will see this error:
+    </p>
+    <img alt="" src="/images/error-production.png" style="max-width: 400px;">
+    <p>You can use your own error page:<br>
+     - Create folder <i>errors</i> in public folder.<br>
+     - Create file <i>production.php</i> in errors folder.<br>
+    </p>
+
+    </article>
 
     <p class="lead pt-5">
       This site build using this repo for docker environment
