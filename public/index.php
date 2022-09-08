@@ -123,6 +123,33 @@ debug(siteUrl());
         </tr>
     </table>
 
+
+    <h2>config/properties.php</h2>
+    <article class="doc-article">
+      You can add properties into your app with creating new file "properties.php" in folder "config".
+    
+      <h4>Follow this steps</h4>
+
+      <p>1. Create folder "config" in root folder</p>
+
+      <p>2. Create file "properties.php" in folder "config"</p>
+<pre>
+&lt;?php
+
+return [
+    'admin_email' => 'eight-green-jumpers@tonephp.com',
+    'site_name' => 'Eight Green Jumpers',
+    'pagination' => 10,
+];
+
+?&gt;
+</pre>
+
+<p>3. Check your new properties by calling function "debug(app()->getProperties());"</p>
+<?php debug(app()->getProperties()); ?>
+    </article>
+
+
     <p class="lead pt-5">
       This site build using this repo for docker environment
       <a href="https://github.com/dyarleniber/docker-php">https://github.com/dyarleniber/docker-php</a>

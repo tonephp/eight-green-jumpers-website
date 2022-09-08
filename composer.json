@@ -7,6 +7,6 @@
         }
     ],
     "require": {
-        "tonephp/eight-green-jumpers": "^0.0.7"
+        "tonephp/eight-green-jumpers": "^0.0.8"
     }
 }
